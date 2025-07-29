@@ -17,6 +17,7 @@ function App() {
   return (
     <div style={{ padding: '2rem' }}>
       <h1>🌍 NASA Global Temperature Predictor</h1>
+      Hi! please do a prediction...
       <input
         type="number"
         value={year}
