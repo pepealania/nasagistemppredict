@@ -1,9 +1,10 @@
 import sys
 import joblib
-import numpy as np
+import pandas as pd
 print("starting prediction...")
 model = joblib.load("temperature_model.pkl")
 year = int(sys.argv[1])
+X_input = pd.DataFrame({'Year': [year]})
 print(f"prediction for year {year}")
-prediction = model.predict(np.array([[year]]))
-print(prediction[0])
+prediction = model.predict(X_input)[0]
+print(prediction)
